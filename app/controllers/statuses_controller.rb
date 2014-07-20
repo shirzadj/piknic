@@ -61,7 +61,7 @@ class StatusesController < ApplicationController
     respond_to do |format|
       if @status.update_attributes(params[:status])
         format.html { redirect_to @status, notice: 'Status was successfully updated.' }
-        format.json { head :no_content }
+        format.json { head :no_contenet }
       else
         format.html { render action: "edit" }
         format.json { render json: @status.errors, status: :unprocessable_entity }
@@ -77,7 +77,7 @@ class StatusesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to statuses_url }
-      format.json { head :no_content }
+      format.json { head :no_contenet }
     end
   end
 end
